@@ -6,4 +6,8 @@ describe('User can check their Bmi', () => {
     cy.get('#height').type('186')
     cy.get('#Calculate').click()
   })
+
+  it('displays a BMi value of 26.01', () => {
+    cy.get('#results').should('contain', '26.01')
+  })
 })
